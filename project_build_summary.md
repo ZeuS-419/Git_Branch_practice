@@ -4,6 +4,9 @@
 - **Repository State**: Active on feature branch (`feature/add-task-modal` or new branch `feature/drag-and-drop`).
 - **Current Milestone**: Lab 2 — HTML5 Drag-and-Drop Card Movement, Priority Pills, and Card Deletion.
 - **Next Action**: User to review changes, commit, and practice branching/merging workflow.
+- **Repository State**: Active on `master` branch.
+- **Current Milestone**: Minor UI & UX enhancements (Column accent top-borders, task timestamp pill, empty-state column fallback).
+- **Next Action**: User to review changes and commit/push to `master`.
 
 ---
 
@@ -17,6 +20,12 @@
   - Implemented card deletion button (`&times;`) with instant state filtering and counter re-calculation.
 - **Modified Files**:
   - [index.html](file:///d:/Github%20Repos/Git_Branch_practice/index.html)
+### 2026-09-30 — Minor UI/UX Polish: Column Accents, Timestamps & Empty States
+- **Accomplished**:
+  - Added distinct 3px colored top border accents for each column (`#col-todo`, `#col-in-progress`, `#col-done`) matching their status neon indicators.
+  - Added timestamp indicator (`⏱️ Today`) to task card footers alongside the task ID.
+  - Added friendly empty-state placeholder (`No tasks in this stage`) when a column has zero cards.
+- **Modified Files**:
   - [style.css](file:///d:/Github%20Repos/Git_Branch_practice/style.css)
   - [app.js](file:///d:/Github%20Repos/Git_Branch_practice/app.js)
   - [project_build_summary.md](file:///d:/Github%20Repos/Git_Branch_practice/project_build_summary.md)
@@ -35,6 +44,18 @@
   - [project_build_summary.md](file:///d:/Github%20Repos/Git_Branch_practice/project_build_summary.md)
 - **Current Overall State**:
   - Feature implementation complete; ready for branch creation, atomic commit, remote push, and GitHub PR creation.
+  - Enhancements complete on `master`; clean working directory ready for Git commit.
+
+### 2026-09-30 — Master Branch Divergent Change: App Footer
+- **Accomplished**:
+  - Implemented `.app-footer` component on `master` with version indicator, sync status dot, and responsive flex styling.
+  - Positioned at the bottom of the container to simulate non-conflicting divergent branch commits between `master` and `feature/add-task-modal`.
+- **Modified Files**:
+  - [index.html](file:///d:/Github%20Repos/Git_Branch_practice/index.html)
+  - [style.css](file:///d:/Github%20Repos/Git_Branch_practice/style.css)
+  - [project_build_summary.md](file:///d:/Github%20Repos/Git_Branch_practice/project_build_summary.md)
+- **Current Overall State**:
+  - `master` is ready to be committed and pushed to remote `origin/master`.
 
 ### 2026-09-30 — Baseline Kanban Board Architecture
 - **Accomplished**:

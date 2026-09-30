@@ -76,6 +76,7 @@ function renderTasks() {
       <div class="task-card-footer">
         <span class="task-id">${task.id}</span>
         ${priorityBadge}
+        <span class="task-date">⏱️ Today</span>
       </div>
     `;
 
@@ -94,6 +95,13 @@ function renderTasks() {
     });
 
     targetList.appendChild(card);
+  });
+
+  // Empty state handling
+  Object.keys(lists).forEach(status => {
+    if (statusTally[status] === 0 && lists[status]) {
+      lists[status].innerHTML = `<div class="empty-state">No tasks in this stage</div>`;
+    }
   });
 
   // Update counter badges
