@@ -20,7 +20,8 @@
         </div>
       </div>
       <div class="header-actions">
-        <span class="branch-pill">🌿 branch: <span id="current-branch-tag">main</span></span>
+        <span class="branch-pill">🌿 branch: <span id="current-branch-tag">feature/add-task-modal</span></span>
+        <button class="btn btn-primary" id="btn-open-modal">+ New Task</button>
       </div>
     </header>
 
@@ -76,6 +77,46 @@
       </div>
       <p class="footer-credit">Built for Git Branching &amp; Collaboration Practice</p>
     </footer>
+  </div>
+
+  <!-- New Task Modal -->
+  <div class="modal-backdrop" id="modal-new-task" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Create New Task</h3>
+        <button class="btn-close" id="btn-close-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="form-new-task">
+        <div class="form-group">
+          <label for="task-title">Task Title</label>
+          <input type="text" id="task-title" required placeholder="e.g., Design user onboarding" />
+        </div>
+        <div class="form-group">
+          <label for="task-desc">Description</label>
+          <textarea id="task-desc" rows="3" placeholder="Brief details about what needs to be done..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="task-priority">Priority</label>
+          <select id="task-priority">
+            <option value="low">🟢 Low</option>
+            <option value="medium" selected>🟡 Medium</option>
+            <option value="high">🔴 High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="task-status">Target Column</label>
+          <select id="task-status">
+            <option value="todo">To Do</option>
+            <option value="in-progress">In Progress</option>
+            <option value="done">Done</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-task">Cancel</button>
+          <button type="submit" class="btn btn-primary">Create Task</button>
+        </div>
+      </form>
+    </div>
   </div>
 
   <script src="app.js"></script>
