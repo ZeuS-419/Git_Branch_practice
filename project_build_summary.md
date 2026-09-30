@@ -1,13 +1,27 @@
 # Project Build Summary
 
 ## Current Status
-- **Repository State**: Working tree ready on feature branch `feature/add-task-modal`.
-- **Current Milestone**: Lab 1 — New Task Modal and Dynamic Card Creation.
-- **Next Action**: User to switch branch, commit changes, push upstream, and open Pull Request on GitHub.
+- **Repository State**: Active on feature branch (`feature/add-task-modal` or new branch `feature/drag-and-drop`).
+- **Current Milestone**: Lab 2 — HTML5 Drag-and-Drop Card Movement, Priority Pills, and Card Deletion.
+- **Next Action**: User to review changes, commit, and practice branching/merging workflow.
 
 ---
 
 ## History & Milestones
+
+### 2026-09-30 — Lab 2: Drag-and-Drop Movement & Priority Tags
+- **Accomplished**:
+  - Implemented HTML5 Drag-and-Drop system enabling intuitive card movement between columns (To Do, In Progress, Done).
+  - Added glowing drop-target indicators (`.column.drag-over`) and active drag ghost styling (`.task-card.dragging`).
+  - Added Priority categorization (High, Medium, Low) with glowing color pills and form select input.
+  - Implemented card deletion button (`&times;`) with instant state filtering and counter re-calculation.
+- **Modified Files**:
+  - [index.html](file:///d:/Github%20Repos/Git_Branch_practice/index.html)
+  - [style.css](file:///d:/Github%20Repos/Git_Branch_practice/style.css)
+  - [app.js](file:///d:/Github%20Repos/Git_Branch_practice/app.js)
+  - [project_build_summary.md](file:///d:/Github%20Repos/Git_Branch_practice/project_build_summary.md)
+- **Current Overall State**:
+  - Full interactive Kanban experience enabled; ready for next Git commit or feature branch practice.
 
 ### 2026-09-30 — Lab 1: Interactive New Task Modal Feature
 - **Accomplished**:

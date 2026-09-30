@@ -196,7 +196,8 @@ body {
   padding: 1rem;
   box-shadow: var(--shadow-card);
   transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
-  cursor: pointer;
+  cursor: grab;
+  user-select: none;
 }
 
 .task-card:hover {
@@ -205,12 +206,53 @@ body {
   border-color: rgba(255, 255, 255, 0.16);
 }
 
+.task-card:active {
+  cursor: grabbing;
+}
+
+.task-card.dragging {
+  opacity: 0.4;
+  transform: scale(0.97) rotate(1deg);
+  border: 1px dashed var(--accent-indigo);
+  cursor: grabbing;
+}
+
+.column.drag-over {
+  border-color: var(--accent-indigo);
+  background-color: rgba(99, 102, 241, 0.05);
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.2) inset;
+}
+
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
 .task-card h3 {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-main);
-  margin-bottom: 0.35rem;
   line-height: 1.4;
+}
+
+.btn-delete-card {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.15rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-delete-card:hover {
+  color: #f87171;
+  background-color: rgba(239, 68, 68, 0.15);
 }
 
 .task-card p {
@@ -232,6 +274,36 @@ body {
   font-size: 0.7rem;
   font-family: monospace;
   color: var(--text-dim);
+}
+
+/* Priority Badges */
+.priority-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.5rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.priority-high {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.priority-medium {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.priority-low {
+  background-color: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
 }
 
 /* Buttons */
