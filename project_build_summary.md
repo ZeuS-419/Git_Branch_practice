@@ -1,13 +1,26 @@
 # Project Build Summary
 
 ## Current Status
-- **Repository State**: Git repository initialized, connected to remote `https://github.com/YasH-c0der/Git_Branch_practice.git`.
-- **Current Branch**: `master` (Ready to commit baseline files: `index.html`, `style.css`, `app.js`, `README.md`).
-- **Upcoming Milestone**: Lab 1 — Feature Branch `feature/add-task-modal` and first GitHub PR.
+- **Repository State**: Working tree ready on feature branch `feature/add-task-modal`.
+- **Current Milestone**: Lab 1 — New Task Modal and Dynamic Card Creation.
+- **Next Action**: User to switch branch, commit changes, push upstream, and open Pull Request on GitHub.
 
 ---
 
 ## History & Milestones
+
+### 2026-09-30 — Lab 1: Interactive New Task Modal Feature
+- **Accomplished**:
+  - Implemented "+ New Task" button with smooth gradient accent and hover micro-animations in the header.
+  - Built an accessible modal overlay with form inputs (Task Title, Description, Column selector) with backdrop blur and enter transitions.
+  - Implemented JavaScript handlers in [app.js](file:///d:/Github%20Repos/Git_Branch_practice/app.js) to append newly created tasks into state and dynamically re-render columns and counter badges.
+- **Modified Files**:
+  - [index.html](file:///d:/Github%20Repos/Git_Branch_practice/index.html)
+  - [style.css](file:///d:/Github%20Repos/Git_Branch_practice/style.css)
+  - [app.js](file:///d:/Github%20Repos/Git_Branch_practice/app.js)
+  - [project_build_summary.md](file:///d:/Github%20Repos/Git_Branch_practice/project_build_summary.md)
+- **Current Overall State**:
+  - Feature implementation complete; ready for branch creation, atomic commit, remote push, and GitHub PR creation.
 
 ### 2026-09-30 — Baseline Kanban Board Architecture
 - **Accomplished**:

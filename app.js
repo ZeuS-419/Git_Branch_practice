@@ -26,7 +26,10 @@ const initialTasks = [
   }
 ];
 
-function renderTasks(tasks) {
+// In-memory Task State
+let tasks = [...initialTasks];
+
+function renderTasks() {
   const lists = {
     todo: document.getElementById("list-todo"),
     "in-progress": document.getElementById("list-in-progress"),
@@ -73,7 +76,57 @@ function renderTasks(tasks) {
   });
 }
 
+function initModalHandlers() {
+  const modal = document.getElementById("modal-new-task");
+  const btnOpen = document.getElementById("btn-open-modal");
+  const btnClose = document.getElementById("btn-close-modal");
+  const btnCancel = document.getElementById("btn-cancel-task");
+  const form = document.getElementById("form-new-task");
+
+  const openModal = () => {
+    modal.removeAttribute("hidden");
+    document.getElementById("task-title").focus();
+  };
+
+  const closeModal = () => {
+    modal.setAttribute("hidden", "");
+    form.reset();
+  };
+
+  btnOpen?.addEventListener("click", openModal);
+  btnClose?.addEventListener("click", closeModal);
+  btnCancel?.addEventListener("click", closeModal);
+
+  // Close when clicking on backdrop outside modal content
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Form submit handler
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const title = document.getElementById("task-title").value.trim();
+    const description = document.getElementById("task-desc").value.trim();
+    const status = document.getElementById("task-status").value;
+
+    if (!title) return;
+
+    const newTask = {
+      id: `TASK-${Math.floor(1000 + Math.random() * 9000)}`,
+      title,
+      description: description || "No description provided.",
+      status
+    };
+
+    tasks.push(newTask);
+    renderTasks();
+    closeModal();
+  });
+}
+
 // Initial Boot
 document.addEventListener("DOMContentLoaded", () => {
-  renderTasks(initialTasks);
+  renderTasks();
+  initModalHandlers();
 });
+
