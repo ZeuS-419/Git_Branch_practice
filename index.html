@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskPulse — Kanban Board</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo-area">
+        <span class="logo-badge">⚡</span>
+        <div>
+          <h1>TaskPulse</h1>
+          <p class="subtitle">Interactive Kanban Workspace</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="branch-pill">🌿 branch: <span id="current-branch-tag">main</span></span>
+      </div>
+    </header>
+
+    <main class="board" id="kanban-board">
+      <!-- Column: To Do -->
+      <section class="column" id="col-todo" data-status="todo">
+        <div class="column-header">
+          <div class="column-title-group">
+            <span class="status-dot dot-todo"></span>
+            <h2>To Do</h2>
+          </div>
+          <span class="task-count" id="count-todo">0</span>
+        </div>
+        <div class="task-list" id="list-todo">
+          <!-- Cards injected via JavaScript -->
+        </div>
+      </section>
+
+      <!-- Column: In Progress -->
+      <section class="column" id="col-in-progress" data-status="in-progress">
+        <div class="column-header">
+          <div class="column-title-group">
+            <span class="status-dot dot-progress"></span>
+            <h2>In Progress</h2>
+          </div>
+          <span class="task-count" id="count-in-progress">0</span>
+        </div>
+        <div class="task-list" id="list-in-progress">
+          <!-- Cards injected via JavaScript -->
+        </div>
+      </section>
+
+      <!-- Column: Done -->
+      <section class="column" id="col-done" data-status="done">
+        <div class="column-header">
+          <div class="column-title-group">
+            <span class="status-dot dot-done"></span>
+            <h2>Done</h2>
+          </div>
+          <span class="task-count" id="count-done">0</span>
+        </div>
+        <div class="task-list" id="list-done">
+          <!-- Cards injected via JavaScript -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
