@@ -129,6 +129,18 @@ body {
   min-height: 480px;
 }
 
+#col-todo {
+  border-top: 3px solid var(--todo-color);
+}
+
+#col-in-progress {
+  border-top: 3px solid var(--progress-color);
+}
+
+#col-done {
+  border-top: 3px solid var(--done-color);
+}
+
 .column-header {
   display: flex;
   justify-content: space-between;
@@ -232,6 +244,26 @@ body {
   font-size: 0.7rem;
   font-family: monospace;
   color: var(--text-dim);
+}
+
+.task-date {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 /* App Footer */

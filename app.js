@@ -59,10 +59,18 @@ function renderTasks(tasks) {
       <p>${task.description}</p>
       <div class="task-card-footer">
         <span class="task-id">${task.id}</span>
+        <span class="task-date">⏱️ Today</span>
       </div>
     `;
 
     targetList.appendChild(card);
+  });
+
+  // Empty state handling
+  Object.keys(lists).forEach(status => {
+    if (statusTally[status] === 0 && lists[status]) {
+      lists[status].innerHTML = `<div class="empty-state">No tasks in this stage</div>`;
+    }
   });
 
   // Update counter badges

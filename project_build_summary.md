@@ -2,12 +2,24 @@
 
 ## Current Status
 - **Repository State**: Active on `master` branch.
-- **Current Milestone**: Divergent branch drill — Added App Footer directly to `master`.
-- **Next Action**: Commit and push `master`, then observe 3-way automatic merge behavior on the `feature/add-task-modal` GitHub PR.
+- **Current Milestone**: Minor UI & UX enhancements (Column accent top-borders, task timestamp pill, empty-state column fallback).
+- **Next Action**: User to review changes and commit/push to `master`.
 
 ---
 
 ## History & Milestones
+
+### 2026-09-30 — Minor UI/UX Polish: Column Accents, Timestamps & Empty States
+- **Accomplished**:
+  - Added distinct 3px colored top border accents for each column (`#col-todo`, `#col-in-progress`, `#col-done`) matching their status neon indicators.
+  - Added timestamp indicator (`⏱️ Today`) to task card footers alongside the task ID.
+  - Added friendly empty-state placeholder (`No tasks in this stage`) when a column has zero cards.
+- **Modified Files**:
+  - [style.css](file:///d:/Github%20Repos/Git_Branch_practice/style.css)
+  - [app.js](file:///d:/Github%20Repos/Git_Branch_practice/app.js)
+  - [project_build_summary.md](file:///d:/Github%20Repos/Git_Branch_practice/project_build_summary.md)
+- **Current Overall State**:
+  - Enhancements complete on `master`; clean working directory ready for Git commit.
 
 ### 2026-09-30 — Master Branch Divergent Change: App Footer
 - **Accomplished**:
